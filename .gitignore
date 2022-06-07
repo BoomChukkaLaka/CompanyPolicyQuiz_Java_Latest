@@ -2,3 +2,7 @@
 /client-staff/target/
 /client-team-manager/target/
 /server/target/
+/client-staff/.idea/
+/client-core/.idea/
+/server/.idea/
+/client-team-manager/.idea/
