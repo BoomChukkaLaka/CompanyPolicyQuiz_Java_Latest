@@ -1,5 +1,6 @@
 package company.policy.client.core;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
@@ -327,8 +328,8 @@ public class PolicyQuestionModel implements Comparable<PolicyQuestionModel> {
         @Override
         public PolicyQuestionModel apply(String s) {
             PolicyQuestionModel model = new PolicyQuestionModel();
-            String[] fields = s.split("\n");
-
+            String[] fields = s.split(System.lineSeparator());
+            
             if (fields.length == 12) {
                 model.setStaffName(fields[0]);
                 model.setPolicyQuestionNumber(Integer.parseInt(fields[1]));
@@ -340,9 +341,9 @@ public class PolicyQuestionModel implements Comparable<PolicyQuestionModel> {
                 model.setAnswerOptionC(fields[7]);
                 model.setAnswerOptionD(fields[8]);
                 model.setAnswerOptionE(fields[9]);
-                model.setCorrectAnswer(Integer.parseInt(fields[10]));
-                model.setGivenAnswer(Integer.parseInt(fields[11]));
-            }
+                    model.setCorrectAnswer(Integer.parseInt(fields[10]));
+                    model.setGivenAnswer(Integer.parseInt(fields[11]));
+                }
 
             return model;
         }
